@@ -3,12 +3,14 @@ package com.nc.course_jetpack_compose_android
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.nc.course_jetpack_compose_android.ui.theme.CoursejetpackcomposeandroidTheme
 
@@ -23,6 +25,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     Greeting("Android")
+                    ImageLogo()
                 }
             }
         }
@@ -30,14 +33,24 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun ImageLogo() {
+   Image(
+       painterResource(R.drawable.ic_launcher_foreground),
+       contentDescription = null
+   )
 }
 
-@Preview(showBackground = true)
+@Composable
+fun Greeting(name: String) {
+    Text(text = "Hello $name!")
+    //Text(text = "Newsoft Computer")
+}
+
+@Preview(showBackground = true, name = "Prueba Compose")
 @Composable
 fun DefaultPreview() {
     CoursejetpackcomposeandroidTheme {
         Greeting("Android")
+        ImageLogo()
     }
 }
