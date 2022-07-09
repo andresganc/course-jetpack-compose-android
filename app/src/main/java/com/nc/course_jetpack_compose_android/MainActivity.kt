@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    Texto("Andres")
                     ImageLogo()
                     Button01()
                 }
@@ -34,12 +34,21 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Preview(showBackground = true, name = "Prueba Compose")
+@Composable
+fun DefaultPreview() {
+    CoursejetpackcomposeandroidTheme {
+        Texto("Andres")
+        ImageLogo()
+    }
+}
+
 @Composable
 fun ImageLogo() {
-   Image(
-       painterResource(R.drawable.ic_launcher_foreground),
-       contentDescription = null
-   )
+    Image(
+        painterResource(R.drawable.ic_launcher_foreground),
+        contentDescription = "Imagen Android"
+    )
 }
 
 @Composable
@@ -49,19 +58,9 @@ fun Button01() {
     }
 }
 
-
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun Texto(name: String) {
+    Text(text = "Hola $name!")
     //Text(text = "Newsoft Computer")
 }
 
-@Preview(showBackground = true, name = "Prueba Compose")
-@Composable
-fun DefaultPreview() {
-    CoursejetpackcomposeandroidTheme {
-        Greeting("Android")
-        ImageLogo()
-        Button01()
-    }
-}
