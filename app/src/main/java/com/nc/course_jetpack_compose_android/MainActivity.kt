@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -26,6 +27,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Greeting("Android")
                     ImageLogo()
+                    Button01()
                 }
             }
         }
@@ -41,6 +43,14 @@ fun ImageLogo() {
 }
 
 @Composable
+fun Button01() {
+    Button(onClick = { /*TODO*/ }) {
+
+    }
+}
+
+
+@Composable
 fun Greeting(name: String) {
     Text(text = "Hello $name!")
     //Text(text = "Newsoft Computer")
@@ -52,5 +62,6 @@ fun DefaultPreview() {
     CoursejetpackcomposeandroidTheme {
         Greeting("Android")
         ImageLogo()
+        Button01()
     }
 }
