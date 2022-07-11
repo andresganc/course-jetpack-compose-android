@@ -83,7 +83,7 @@ fun Card01() {
     name = "Dark Mode"
 )
 @Composable
-fun DefaultPreview() {
+fun DefaultPreviewMaterialTheme() {
     CoursejetpackcomposeandroidTheme {
         Card01()
     }

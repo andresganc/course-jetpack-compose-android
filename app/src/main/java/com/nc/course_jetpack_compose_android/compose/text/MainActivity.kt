@@ -52,7 +52,7 @@ fun Company2(name: String) {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun DefaultPreviewText() {
     CoursejetpackcomposeandroidTheme {
         ColumnText()
     }

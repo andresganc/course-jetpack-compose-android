@@ -62,7 +62,7 @@ fun Card01() {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun DefaultPreviewRow() {
     CoursejetpackcomposeandroidTheme {
         Card01()
     }
