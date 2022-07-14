@@ -1,5 +1,6 @@
 package com.nc.course_jetpack_compose_android.compose.column
 
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -19,7 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.nc.course_jetpack_compose_android.compose.column.ui.theme.CoursejetpackcomposeandroidTheme
 import com.nc.course_jetpack_compose_android.compose.text.ColumnText
 
-class MainActivity : ComponentActivity() {
+class Column01 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -37,7 +38,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun ColumnText() {
+fun ColumnText01() {
     Column(
         modifier = Modifier.fillMaxHeight(),
         // verticalArrangement = Arrangement.Top,
@@ -52,13 +53,13 @@ fun ColumnText() {
         // horizontalAlignment = Alignment.CenterHorizontally
     )
     {
-        Company1()
-        Company2(
+        Company01()
+        Company02(
             name = "Web",
             modifier = Modifier
                 .background(Color.Red)
         )
-        Company3(
+        Company03(
             name = "SoftApp",
             modifier = Modifier
                 .background(Color.Yellow)
@@ -69,23 +70,23 @@ fun ColumnText() {
 
 
 @Composable
-fun Company1() {
+fun Company01() {
     Text(text = "Newsoft Computer")
 }
 
 @Composable
-fun Company2(name: String, modifier: Modifier) {
+fun Company02(name: String, modifier: Modifier) {
     Text(text = "NC $name")
 }
 
 @Composable
-fun Company3(name: String, modifier: Modifier) {
+fun Company03(name: String, modifier: Modifier) {
     Text(text = "NC $name")
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreviewColumn() {
+fun DefaultPreviewColumn01() {
     CoursejetpackcomposeandroidTheme {
         ColumnText()
     }
